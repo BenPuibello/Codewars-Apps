@@ -1,0 +1,44 @@
+
+
+
+
+
+public class Kata
+{
+  public static int GetLengthOfMissingArray(object[][] arrayOfArrays)
+  {
+    List<int> count = new List<int>();
+    if(arrayOfArrays == null || arrayOfArrays.Length == 0)
+      {
+          return 0;
+      }
+    
+    int rowCount = arrayOfArrays.Length;
+    
+       
+    
+    for(int i = 0; i < rowCount; ++i)
+    {
+        if(arrayOfArrays[i] == null || arrayOfArrays[i].Length == 0  )
+        {
+            return 0;
+        }
+       
+        
+        count.Add(arrayOfArrays[i].Length);
+    }
+    count.Sort();
+    int x = count[0];
+    
+    foreach(int n in count)
+    {
+        if(n != x)
+        {
+            return x;
+        }
+        ++x;
+    }
+    
+    return x;
+  }
+}
