@@ -1,0 +1,11 @@
+Instructions:
+
+You get an array of arrays that have consecutuve lengths but one is missing.  For example, I have jagged array that has four total arrays.  The lengths of the arrays are 2, 3, 5, and 6.  The program needs to return the value 4 because that is the missing array length.
+
+If the array containing the arrays is null or any array in the array is null or empty the program should return 0.
+
+Stuff learned:
+
+1) Jagged arrays
+2) Refreshed my knowledge of reference types and null
+3) Educated me on zero length arrays
