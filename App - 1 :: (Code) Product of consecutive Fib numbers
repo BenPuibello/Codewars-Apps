@@ -1,0 +1,46 @@
+public static ulong[] productFib(ulong prod)       
+      {
+            
+            List<ulong> fibs = new List<ulong>() {0, 1};
+            ulong[] answer = new ulong[3];
+            
+            int ctr = fibs.Count;
+            
+            
+            while(Convert.ToUInt64((fibs[ctr-1] * fibs[ctr-2])) < prod)
+            {
+                Fibs(fibs);
+                ctr = fibs.Count;
+                               
+                
+            }
+            
+            
+            if(Convert.ToUInt64((fibs[ctr-1] * fibs[ctr-2])) == prod)
+            {
+                
+                answer[0] = fibs[ctr-2];
+                answer[1] = fibs[ctr-1];
+                answer[2] = 1;
+                
+            }
+            else
+            {
+                answer[0] = fibs[ctr-2];
+                answer[1] = fibs[ctr-1];
+                answer[2] = 0;
+                
+            }
+            
+            ctr = 0;
+            
+            return answer;
+            
+      }
+      
+      static List<ulong> Fibs(List<ulong> fibs)
+      {
+          int i = fibs.Count;
+          fibs.Add(fibs[i-1] + fibs[i-2]);
+          return fibs;
+      }
