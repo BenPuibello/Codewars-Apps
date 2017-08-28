@@ -1,1 +1,7 @@
+Instructions for this Kata.
 
+Name = Product of consecutive Fib numbers.
+
+Description:
+
+This Kata was rather easy.  The program would give you a number and you would have to find if two consecutive numbers in a Fibonaci sequece when multiplied would equal that number.  If so, return the two Fib numbers and TRUE.  If not, then return the two most recent numbers in the Fib sequence and false.
