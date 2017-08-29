@@ -1,0 +1,5 @@
+Determine Narcissistic Numbers.
+
+Description:
+
+Simple app where I'm given an integer and I have to determine if it is a Narcissistic Number or not.  To do so you have to use modulo and Math.Pow function.  I convert my given integer to an unsigned long which is the largest data type for integral numbers in C#.
