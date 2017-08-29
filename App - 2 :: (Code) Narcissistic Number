@@ -1,0 +1,31 @@
+public class Kata
+{
+  public static bool Narcissistic(int value)
+  {
+    ulong copy = Convert.ToUInt64(value);
+    ulong total = 0;
+    List<ulong> nums = new List<ulong>();
+        
+    while(copy > 0)
+    {
+        nums.Add(copy % 10);
+        copy /= 10;
+    }
+    
+    foreach(ulong x in nums)
+    {
+        total += Convert.ToUInt64(Math.Pow(x, nums.Count));
+    }
+    
+    if (total == Convert.ToUInt64(value))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
+    
+  }
+}
