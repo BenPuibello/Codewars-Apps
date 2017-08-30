@@ -1,0 +1,98 @@
+using System.Collections.Generic;
+using System;
+
+public class DirReduction {
+  
+    public static string[] dirReduc(String[] arr) 
+    {
+        //print values for testing
+
+        List<string> copy = new List<string>();
+
+        foreach(string s in arr)
+        {
+            copy.Add(s);
+        }
+        
+        //my algo here
+        bool noHit = false;
+        bool posMatch = false;
+        
+        while(!noHit)
+        {
+            for(int i = 0; i < copy.Count; ++i)
+            {
+                
+                if(i == copy.Count -1)
+                {
+                    break;
+                }
+                
+                if(Compare(copy, i))
+                {
+                    posMatch = true;
+                }
+                
+            }
+            
+            if(!posMatch)
+            {
+                noHit = true;
+            }
+            posMatch = false;
+            
+            
+        }
+        
+        //end of while loop now add back to array and return
+        string[] answer = new string[copy.Count];
+        for(int x = 0; x < copy.Count; ++x)
+        {
+            answer[x] = copy[x];
+            
+        }
+        
+        
+        return answer;
+    }
+    
+    public static bool Compare(List<string> a, int i)
+    {
+        bool result = false;
+        
+        if(a[i].Equals("NORTH", StringComparison.Ordinal) && a[i+1].Equals("SOUTH", StringComparison.Ordinal))
+        {
+            a.RemoveAt(i);
+            a.RemoveAt(i);
+            result = true;
+        }
+        
+        else if(a[i].Equals("SOUTH", StringComparison.Ordinal) && a[i+1].Equals("NORTH", StringComparison.Ordinal))
+        {
+            a.RemoveAt(i);
+            a.RemoveAt(i);
+            result = true;
+        }
+        
+        else if(a[i].Equals("EAST", StringComparison.Ordinal) && a[i+1].Equals("WEST", StringComparison.Ordinal))
+        {
+            a.RemoveAt(i);
+            a.RemoveAt(i);
+            result = true;
+        }
+        
+        else if(a[i].Equals("WEST", StringComparison.Ordinal) && a[i+1].Equals("EAST", StringComparison.Ordinal))
+        {
+            a.RemoveAt(i);
+            a.RemoveAt(i);
+            result = true;
+        }
+        else
+        {
+            result = false;
+        }
+        
+        return result;
+    
+    }
+}
