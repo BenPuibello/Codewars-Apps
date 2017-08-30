@@ -1,0 +1,11 @@
+Kata Title: Directions Reduction
+
+Description:
+Given an array of cardinal directions write an application that would remove elements given a relationship.  That relationship being if NORTH and SOUTH were together and EAST and WEST were together.  Visa versa for each.  For example, if I was given an array with ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"] the app must return ["WEST"].
+
+My app:
+I first converted the array to a List as that would be easier to add, remove and resize.  Then I build a second method to handle the removal of the elements if they matched.  Once completed I returned back the List back to the array.
+
+Refactoring:
+**after reviewing other solutions.
+1) Use the .ToArray method on the List collection to convert the list to an array rather than use a loop.
