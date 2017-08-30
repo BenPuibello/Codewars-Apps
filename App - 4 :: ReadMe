@@ -1,0 +1,12 @@
+Title: Moving Zeros To The End
+
+Description:  When given an array of integers, write an application that will preserve the given order but remove all the zeroes and add them to the end of the array.
+
+My implementation:
+I used the List collection along with while loops to remove all the zeroes.  Then at the end used my counter variable to add back the correct amount of zeroes at the end.
+
+What I improved on:
+I used the .ToArray method to turn my list back in to an array as the method was expecting an array data type to be returned.
+
+What I learned:
+I need to review the capabilities available in the System.Linq namespace of the language.
