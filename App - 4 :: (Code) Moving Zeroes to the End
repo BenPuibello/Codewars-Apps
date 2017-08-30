@@ -1,0 +1,45 @@
+using System.Collections.Generic;
+using System.Linq;
+using System;
+
+public class Kata
+{
+  public static int[] MoveZeroes(int[] arr)
+  {
+      List<int> nums = arr.ToList<int>();
+      int ctr = 0;
+      bool arrayNoZeroes = false;
+      bool removeZeroes = true;
+      
+      while (!arrayNoZeroes)
+      {
+          if(removeZeroes)
+          {
+              removeZeroes = false;
+              for(int i = 0; i < nums.Count; ++i)
+              {
+                  if(nums[i] == 0)
+                  {
+                      nums.RemoveAt(i);
+                      ++ctr;
+                      removeZeroes = true;
+                  }
+              }
+          }
+          if(!removeZeroes)
+          {
+              arrayNoZeroes = true;
+          }
+      }
+      
+      //now add my zeroes back
+      for(int x = 0; x < ctr; ++x)
+      {
+          nums.Add(0);
+      }
+      
+      int[] answer = nums.ToArray();
+      return answer;
+
+  }
+}
