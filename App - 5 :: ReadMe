@@ -1,0 +1,5 @@
+Name: Largest 5 digit number in a series
+
+Objective:  When given a string, find and return the largest 5 digit integer
+
+Review:  This kata was relatively easy and took me only about 30 minutes.  I use nested loops to create my 5 digit string, convert to int and then compare to find low value.
