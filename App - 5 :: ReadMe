@@ -3,3 +3,12 @@ Name: Largest 5 digit number in a series
 Objective:  When given a string, find and return the largest 5 digit integer
 
 Review:  This kata was relatively easy and took me only about 30 minutes.  I use nested loops to create my 5 digit string, convert to int and then compare to find low value.
+
+
+Lessons learned:
+
+1) Math.Max()
+  -given two numbers it will return  the largest
+  
+2) String.Substring()
+    -returns a substring of a given string.  Two arguments are an index value as to where to start in the string and the length of      string it should return.
