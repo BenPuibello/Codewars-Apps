@@ -1,0 +1,44 @@
+    public static List<int> Convert(char[] c)
+    {
+        List<int> values = new List<int>();
+        foreach(char t in c)
+        {
+            switch(t)
+            {
+                case 'M':
+                  values.Add(1000);
+                  break;
+                  
+                case 'D':
+                  values.Add(500);
+                  break;
+                  
+                case 'C':
+                  values.Add(100);
+                  break;
+                  
+                case 'L':
+                  values.Add(50);
+                  break;
+                  
+                case 'X':
+                  values.Add(10);
+                  break;
+                  
+                case 'V':
+                  values.Add(5);
+                  break;
+                  
+                case 'I':
+                  values.Add(1);
+                  break;
+                  
+                default:
+                  break;
+            }
+        
+        }
+        
+        return values;
+    
+    }
