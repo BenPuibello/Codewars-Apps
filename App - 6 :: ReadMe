@@ -1,0 +1,6 @@
+App = Roman Numericals Decoder
+
+Description:  When given a string of roman numerals convert to an integer
+
+Explanation and takeaways:
+This app was relatively straightforward for me and didn't take long.  When looking at other solutions mine wasn't too far off from the others either.  Used a basic switch to convert then a for statement to loop through.  
