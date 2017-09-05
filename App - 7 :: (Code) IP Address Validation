@@ -1,0 +1,58 @@
+using System;
+
+namespace Solution
+  {
+  class Kata
+    {
+      public static bool is_valid_IP(string IpAddres)
+      {
+        char[] ca = IpAddres.ToCharArray();
+        int dot = 0;
+        
+        Console.WriteLine($"HERE IS THE ADDRESS ----> {IpAddres}");
+        for(int i = 0; i < ca.Length; ++i)
+        {
+            if(ca[i] == '.')
+            {
+                ++dot;
+            }
+            
+            if(Check(ca[i]))
+            {
+                return false;
+                
+            }
+        }
+        
+        if(dot != 3)
+        {
+          return false;
+        }
+        return true;
+        //Code here
+      }
+      
+      public static bool Check(char c)
+      {
+            if(Char.IsLetter(c))
+            {
+                return true;
+            }
+            else if(c == ' ')
+            {
+                return true;
+            }
+            else if(c == '0')
+            {
+                return true;
+            }
+            else if(c == '-')
+            {
+                return true;
+            }
+            return false;
+          
+          //algo here
+      }
+    }
+  }
