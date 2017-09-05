@@ -1,0 +1,6 @@
+Name:  IP Address Validation
+
+Description: Determine if a given string is a valid IP address
+
+Takeaways:
+Another pretty simple one that I finished in under 30 mins.  Once again I employed the ToCharArray method from a string to loop through and check the characters.
